@@ -11,6 +11,13 @@ body{
     padding-bottom: 7em;
 }
 
+card,
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 article,
 .two-col {
     display: flex;
@@ -44,6 +51,7 @@ header {
 
 .two-col section {
     flex: 1;
+    flex-direction: row;
 }
 
 @media only screen and (max-width: 2048px) {
@@ -80,7 +88,7 @@ header h1{
     border-bottom-width: 0;
     background-color: #ffffff;
     margin-bottom: 0;
-    padding: 20px 2px 20px 2px;
+    padding: 5px 2px 5px 2px;
 }
 
 header p {
@@ -129,17 +137,19 @@ p {
 a {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    font-size: .1em;
     text-transform: uppercase;
     letter-spacing: .2em;
     display: block;
     text-decoration: none;
     background-color: #333;
     color: white;
-    margin: 50px 0;
-    padding: 20px 5px;
+    margin: 5px 0;
+    padding: 5px 5px;
     box-shadow: inset 0 0 0 4px white, 0 0 0 1px gray;
     transition: all .5s ease;
     text-align: center;
+    width: 25%;
 }
 
 ul li{
@@ -189,14 +199,13 @@ li {
 }
 
 .card{
-    margin-top: .5em;
+    margin: .5em;
     width: inherit;
 }
 
 .card-title{
     text-align: center;
     margin: 0;
-    border-bottom: solid #000000;
 }
 
 .experiences{
@@ -205,11 +214,17 @@ li {
     font-feature-settings: 'lnum' 1;
 }
 
-@media only screen and (max-width: 2048px) {
-    .two-col ul li {display: inline;}
-    .two-col ul li:after {content: ","}
-    .two-col ul li:last-child:after {content: "."}
+.container{
+    justify-content: center;
+    display: flex;
+}
 
+@media only screen and (max-width: 2048px) {
+    .two-col ul li {
+        display: inline-flex;
+        justify-content: center;
+        justify-self: center;
+    }
     .two-col ol li {
         display: flex;
         justify-content: space-between;
@@ -220,6 +235,13 @@ li {
     }
     .two-col li {
         font-size: 1em;
+    }
+    card,
+    .two-col{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+
     }
 
     h1 {
@@ -244,7 +266,7 @@ li {
 
     a {
         display: block;
-        width: 48%;
+        width: 24%;
         margin: 1em auto;
         text-align: center;
     }
