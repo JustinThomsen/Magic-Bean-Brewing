@@ -5,8 +5,9 @@
 
 body{
     min-width: 480px;
-    background: url("../img/beltbackground.png") repeat-y;
-    background-color: black;
+    background: url("large_Beer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-bottom: 7em;
 }
 
@@ -18,7 +19,7 @@ article,
 }
 
 article {
-    padding: 5%;
+    padding: 2%;
     display: flex;
 }
 
@@ -45,7 +46,7 @@ header {
     flex: 1;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 2048px) {
     body{
         padding-bottom: 10em;
     }
@@ -118,7 +119,7 @@ h3 strong {
 
 p,
 li {
-    font-family: Georgia, sans-serif;
+    font-family: fantasy, sans-serif;
 }
 
 p {
@@ -167,7 +168,7 @@ ul {
 }
 
 li {
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .two-col section:first-child {
@@ -200,9 +201,11 @@ li {
 
 .experiences{
     text-align: center;
+    font-size: 1em;
+    font-feature-settings: 'lnum' 1;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 2048px) {
     .two-col ul li {display: inline;}
     .two-col ul li:after {content: ","}
     .two-col ul li:last-child:after {content: "."}
@@ -221,7 +224,7 @@ li {
 
     h1 {
         text-align: center;
-        font-size: 3em;
+        font-size: 2em;
         margin-bottom: 0;
     }
 
